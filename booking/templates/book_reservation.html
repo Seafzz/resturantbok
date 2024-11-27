@@ -5,3 +5,12 @@
 {% block content %}
 <div class="container mt-5">
     <h2 class="text-center mb-4">Make a Reservation</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header text-white bg-primary">
+                    <h5 class="card-title">Reserve Your Table</h5>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{% url 'reservation_create' %}">
+                        {% csrf_token %}  <!-- CSRF token -->
