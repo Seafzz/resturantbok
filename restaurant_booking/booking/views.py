@@ -27,3 +27,9 @@ def view_reservation(request):
 #Update Reservation
 @login_required
 def update_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id, user=request.user) #To Ensure its the users reservation
+    if request.method == 'POST':
+        form = ReservationForm(request.POST, instance=reservation)
+        if form_is_valid():
+            form.save()
+            return redirect('view_reservations')
