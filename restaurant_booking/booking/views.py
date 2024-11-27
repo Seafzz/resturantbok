@@ -33,3 +33,6 @@ def update_reservation(request, reservation_id):
         if form_is_valid():
             form.save()
             return redirect('view_reservations')
+        else:
+            form = ReservationForm(instance=reservation)
+        return render(request, 'booking/update_reservation.html',{'form': form, 'reservation': reservation})
