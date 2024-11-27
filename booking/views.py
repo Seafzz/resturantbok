@@ -49,3 +49,12 @@ def cancel_reservation(request, reservation_id):
 
 def home(request):
     return render(request, 'home.html')
+
+def book_reservation(request):
+    return render(request, 'booking/book_reservation.html')
+
+def view_reservations(request):
+    return render(request, 'booking/view_reservations.html')
+
+def reservation_success(request):
+    return render(request, 'booking/reservation_success.html')
