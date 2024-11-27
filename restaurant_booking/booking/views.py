@@ -36,3 +36,10 @@ def update_reservation(request, reservation_id):
         else:
             form = ReservationForm(instance=reservation)
         return render(request, 'booking/update_reservation.html',{'form': form, 'reservation': reservation})
+
+#Cancel Reservation
+@login_required
+def cancel_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id, user=request.user)
+    reservation.delete()
+    return redirect('view_reservations')
