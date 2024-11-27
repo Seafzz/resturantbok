@@ -8,3 +8,6 @@ class Reservation(models.Model):
     date = models.DateTimeField()
     party_size = models.IntegerField()
     status = models.CharField(max_length=20, choices=[('pending', 'Pending'), ('confirmed', 'Confirmed')], default='pending')
+
+    def __str__(self):
+        return f"Reservation by {self.name} for {self.party_size} people"
