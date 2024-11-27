@@ -14,9 +14,15 @@
                 <div class="card-body">
                     <form method="POST" action="{% url 'reservation_create' %}">
                         {% csrf_token %}  <!-- CSRF token -->
-                        
+
                         <!--Name-->
                         <div class="form-group mb-3">
                             <label for="name">Full Name</label>
                             <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <!-- Email  -->
+                        <div class="form-group mb-3">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email address">
                         </div>
