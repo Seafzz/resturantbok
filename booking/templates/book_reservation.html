@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <form method="POST" action="{% url 'reservation_create' %}">
                         {% csrf_token %}  <!-- CSRF token -->
-
+                            <!--BOOTSTRAP-->
                         <!--Name-->
                         <div class="form-group mb-3">
                             <label for="name">Full Name</label>
@@ -54,3 +54,9 @@
                         <!-- Button -->
                         <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">Book Reservation</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
