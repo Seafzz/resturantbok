@@ -44,3 +44,8 @@ def cancel_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, id=reservation_id, user=request.user)
     reservation.delete()
     return redirect('view_reservations')
+
+
+
+def home(request):
+    return render(request, 'home.html')
