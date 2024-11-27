@@ -22,3 +22,8 @@ def book_reservation(request):
 def view_reservation(request):
     reservations = Reservation.objects.filter(user=request.user)
     return render(request, 'booking/view_reservations.html', {'reservations': reservations})
+
+
+#Update Reservation
+@login_required
+def update_reservation(request, reservation_id):
