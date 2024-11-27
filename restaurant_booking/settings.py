@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-_0g4ie$2tsci5_l8u3#w1pk!n^9nyy4+aw=c(t8#ts87smcd$y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-seafzz-resturantbok-ry5c3urdgkr.ws-eu116.gitpod.io']
+ALLOWED_HOSTS = ['8000-seafzz-resturantbok-6cic2ejx85k.ws-eu116.gitpod.io']
 
 
 # Application definition
@@ -130,6 +130,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-seafzz-resturantbok-ry5c3urdgkr.ws-eu116.gitpod.io',
-    'http://127.0.0.1:8000',
+    'https://*.gitpod.io',
+    
 ]
